@@ -8,7 +8,7 @@ import {
   AUTH_ERROR,
  }  from './types'
  import { getServer } from "../util"
-import { setAuthToken } from "../util/setAuthToken"
+import setAuthToken from "../util/setAuthToken"
 
 // set a user
 export const setCurrentUser = (user) => async dispatch => {

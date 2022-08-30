@@ -4,17 +4,17 @@ import {
   FAILURE_REGISTER,
   ERRORS,
   AUTH_ERROR,
-} from './types'
+} from '../actions/types'
 import { isEmpty } from 'lodash'
 
 const initialState = {
   isAuthenticated: false,
   token: localStorage.getItem("token"),
   user: {},
-  errors: []
+  errors: [],
 }
 
-export default function (state = initialState, action) {
+export default function authReducer (state = initialState, action)  {
   const { payload } = action
   switch (action.type) {
     case SET_CURRENT_USER:
